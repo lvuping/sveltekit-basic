@@ -9,6 +9,7 @@
 	} from '$lib/components/ui/card';
 	import { Input } from '$lib/components/ui/input';
 	import { Label } from '$lib/components/ui/label';
+	import { Badge } from '$lib/components/ui/badge';
 
 	let name = '';
 	let email = '';
@@ -35,6 +36,12 @@
 <div class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-8">
 	<div class="mx-auto max-w-4xl">
 		<h1 class="mb-8 text-center text-4xl font-bold text-gray-900">shadcn/ui for Svelte 예제</h1>
+		
+		<div class="mb-8 text-center">
+			<Button onclick={() => window.location.href = '/database'} size="lg">
+				SQLite 데이터베이스 예제 보기 →
+			</Button>
+		</div>
 
 		<div class="grid gap-8 md:grid-cols-2">
 			<!-- 폼 카드 -->
@@ -119,6 +126,39 @@
 				</CardContent>
 			</Card>
 
+			<!-- Badge 예제 카드 -->
+			<Card>
+				<CardHeader>
+					<CardTitle>Badge 예제</CardTitle>
+					<CardDescription>다양한 스타일의 Badge 컴포넌트들을 확인해보세요.</CardDescription>
+				</CardHeader>
+				<CardContent class="space-y-4">
+					<div class="flex flex-wrap gap-2">
+						<Badge>기본 Badge</Badge>
+						<Badge variant="secondary">보조 Badge</Badge>
+						<Badge variant="destructive">삭제 Badge</Badge>
+						<Badge variant="outline">아웃라인 Badge</Badge>
+					</div>
+					<div class="flex flex-wrap gap-2">
+						<Badge>New</Badge>
+						<Badge variant="secondary">Popular</Badge>
+						<Badge variant="destructive">Urgent</Badge>
+						<Badge variant="outline">Draft</Badge>
+					</div>
+					<div class="space-y-2">
+						<p class="text-sm text-gray-600">상태 표시 예제:</p>
+						<div class="flex gap-2">
+							<span class="text-sm">상태:</span>
+							<Badge variant="secondary">진행 중</Badge>
+						</div>
+						<div class="flex gap-2">
+							<span class="text-sm">우선순위:</span>
+							<Badge variant="destructive">높음</Badge>
+						</div>
+					</div>
+				</CardContent>
+			</Card>
+
 			<!-- 정보 카드 -->
 			<Card>
 				<CardHeader>
@@ -131,6 +171,7 @@
 						<li>✅ <strong>Card:</strong> 콘텐츠를 구조화하는 컨테이너</li>
 						<li>✅ <strong>Input:</strong> 사용자 입력을 받는 필드</li>
 						<li>✅ <strong>Label:</strong> 입력 필드의 라벨</li>
+						<li>✅ <strong>Badge:</strong> 상태나 카테고리를 표시하는 작은 라벨</li>
 					</ul>
 					<div class="mt-4 rounded-lg bg-blue-50 p-3">
 						<p class="text-sm text-blue-800">

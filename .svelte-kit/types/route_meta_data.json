@@ -1,3 +1,13 @@
 {
-	"/": []
+	"/": [],
+	"/api/todos": [
+		"src/routes/api/todos/+server.ts"
+	],
+	"/api/todos/[id]": [
+		"src/routes/api/todos/[id]/+server.ts"
+	],
+	"/api/users": [
+		"src/routes/api/users/+server.ts"
+	],
+	"/database": []
 }
